@@ -1,0 +1,23 @@
+<%- include("../partials/header") %>
+
+<div class="row">
+	<div class="col-md-4">
+		<div id="user-card" class="card" style="max-height: 20rem;">
+			<img class="card-img-top" src="<%= user.avatar %>" alt="user profile image" style="max-height: 15rem;">
+			<div class="card-body">
+				<h5 class="card-title"><%= user.firstname %> <%= user.lastname %></h5>
+				<a href="#" class="card-link">Email: <%= user.email %></a>
+			</div>
+		</div>		
+	</div>
+	<div class="col-md-8">
+		<h3><%= user.username %>'s trails:</h3>
+		<ul>
+			<% trails.forEach(function(trail){ %>
+				<li><a href="/trails/<%= trail.id %>"><%= trail.name %></a></li>
+			<% }) %>
+		</ul>
+	</div>
+</div>
+
+<%- include("../partials/footer") %>

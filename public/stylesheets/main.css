@@ -1,0 +1,43 @@
+
+.show-delete-form{
+	display:inline;
+}
+
+.jumbotron{
+	padding-bottom:10px;
+}
+
+.lead{
+	font-family: 'Baloo Tammudu 2', cursive;
+	margin-top:15px;
+	margin-bottom:0;
+	
+}
+
+#trailBrand{
+	font-family: 'Lobster', cursive;
+	font-size:1.3rem;
+}
+
+#welcome{
+	font-family: 'Open Sans', sans-serif;
+}
+
+#map{
+	margin-top:10px;
+	box-shadow: 0 0 1px rgba(0,0,0,0.8);
+}
+
+#user-card{
+	width:100%;
+}
+
+.line-limit-length {
+
+overflow: hidden;
+
+text-overflow: ellipsis;
+
+white-space: nowrap; 
+
+}
