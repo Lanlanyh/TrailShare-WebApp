@@ -7,7 +7,7 @@
 			  width="100%"
 			  height="450"
 			  frameborder="0" style="border:0"
-			  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCO_-3nSq_K_JMzohMyTyIhh4iT_u5R9Rc&q=<%= trail.location %>" allowfullscreen>
+			  src="https://www.google.com/maps/embed/v1/place?key=<%= process.env.MAP_API_KEY %>&q=<%= trail.location %>" allowfullscreen>
 			</iframe>
 		</div>
 	</div>
