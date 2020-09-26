@@ -17,10 +17,12 @@ var express = require("express"),
 	commentRoutes = require("./routes/comments"),
 	indexRoutes = require("./routes/index");
 
-//connect database
-mongoose.connect('mongodb://localhost:27017/trail-share', { useNewUrlParser: true, useUnifiedTopology: true})
+
+//Connect database 
+mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true, useUnifiedTopology: true})
 .then(() => console.log('Connected to DB!'))
 .catch(error => console.log(error.message));
+
 
 //set view engine
 app.set("view engine","ejs");
@@ -59,6 +61,6 @@ app.use(commentRoutes);
 app.use(indexRoutes);
 
 
-app.listen(3000,function(){
+app.listen(process.env.PORT || 3000,process.env.IP,function(){
 	console.log("TrailShare Server has started");
 })
